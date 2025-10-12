@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name – Home</title>
+<meta name="description" content="Personal website of Your Name." />
+<style>
+:root { --bg: #0b0c10; --card: #111318; --text: #e6e6e6; --muted: #b3b3b3; --accent: #7aa2ff; --border: #22242b; }
+@media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #334155; --accent: #3b82f6; --border: #e2e8f0; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 980px; margin: 0 auto; padding: 24px; }
+header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in srgb, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); z-index: 10; }
+nav { display: flex; gap: 18px; align-items: center; justify-content: space-between; }
+.brand { font-weight: 700; letter-spacing: .4px; }
+.links { display: flex; gap: 16px; font-weight: 500; }
+.chip { padding: 6px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; }
+main { text-align: center; padding: 80px 20px; }
+h1 { font-size: clamp(28px, 5vw, 48px); }
+p { color: var(--muted); max-width: 700px; margin: 12px auto 24px; }
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="brand">Your Name</div>
+<div class="links">
+<a href="professional.html" class="chip">Professional</a>
+<a href="personal.html" class="chip">Personal</a>
+</div>
+</nav>
+</div>
+</header>
+
+
+<main>
+<h1>Welcome 👋</h1>
+<p>This is my personal website. Use the tabs above to view my <strong>Professional/School</strong> portfolio or my <strong>Personal</strong> page.</p>
+</main>
+</body>
+</html>
