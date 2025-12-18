@@ -5,14 +5,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tyler Hamilton – Personal</title>
-<meta name="description" content="Personal interests of Your Name." />
+<meta name="description" content="Personal interests of Tyler Hamilton." />
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
 <div class="container">
 <nav>
-<div class="brand">Your Name</div>
+<div class="brand">Tyler Hamilton</div>
 <div class="links">
 <a href="index.html" class="chip">Home</a>
 <a href="professional.html" class="chip">Professional</a>
@@ -35,20 +35,20 @@
 <h2>Hobbies & Interests</h2>
 <div class="grid cols-2">
 <div class="card">
-<h3>🎨 Creative</h3>
-<p>Photography, design, writing, or any creative pursuits you enjoy.</p>
+<h3>✈️ Traveling</h3>
+<p>Exploring new places, experiencing different cultures, and creating memories around the world.</p>
 </div>
 <div class="card">
-<h3>🎮 Gaming</h3>
-<p>Video games, board games, or tabletop RPGs you're passionate about.</p>
+<h3>🍳 Cooking</h3>
+<p>Exploring new recipes, trying different cuisines, or perfecting your favorite dishes.</p>
 </div>
 <div class="card">
 <h3>🏃 Sports & Fitness</h3>
 <p>Running, cycling, hiking, or any physical activities you love.</p>
 </div>
 <div class="card">
-<h3>📚 Reading & Learning</h3>
-<p>Books, podcasts, courses, or topics you're currently exploring.</p>
+<h3>👨‍👩‍👧‍👦 Spending time with Family/Friends</h3>
+<p>Enjoying quality time with loved ones, whether it's a casual hangout or special occasions.</p>
 </div>
 </div>
 </section>
@@ -81,5 +81,15 @@
 </div>
 </section>
 </main>
+<script>
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    document.title = 'Please come back! 🥺';
+  } else {
+    document.title = originalTitle;
+  }
+});
+</script>
 </body>
 </html>

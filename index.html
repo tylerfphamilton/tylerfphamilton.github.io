@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Your Name – Home</title>
-<meta name="description" content="Personal website of Your Name." />
+<title>Tyler Hamilton – Home</title>
+<meta name="description" content="Personal website of Tyler Hamilton - Computer Engineering Student at Cal Poly SLO." />
 <style>
 :root { --bg: #0b0c10; --card: #111318; --text: #e6e6e6; --muted: #b3b3b3; --accent: #7aa2ff; --border: #22242b; }
 @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #334155; --accent: #3b82f6; --border: #e2e8f0; } }
@@ -29,7 +29,7 @@ p { color: var(--muted); max-width: 700px; margin: 12px auto 24px; }
 <header>
 <div class="container">
 <nav>
-<div class="brand">Your Name</div>
+<div class="brand">Tyler Hamilton</div>
 <div class="links">
 <a href="professional.html" class="chip">Professional</a>
 <a href="personal.html" class="chip">Personal</a>
@@ -53,5 +53,15 @@ p { color: var(--muted); max-width: 700px; margin: 12px auto 24px; }
 </a>
 </div>
 </main>
+<script>
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    document.title = 'Please come back! 🥺';
+  } else {
+    document.title = originalTitle;
+  }
+});
+</script>
 </body>
 </html>

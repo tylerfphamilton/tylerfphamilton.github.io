@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Your Name – Professional</title>
-<meta name="description" content="Professional portfolio of Your Name." />
+<title>Tyler Hamilton – Professional</title>
+<meta name="description" content="Professional portfolio of Tyler Hamilton - Computer Engineering Student at Cal Poly SLO." />
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,10 +25,19 @@
 <section class="hero">
 <div>
 <h1>Hi, I'm <span style="white-space:nowrap">Tyler Hamilton</span> 👋</h1>
-<p>I am currently a Senior Computer Engineering Student at Cal Poly SLO. I am intested in Machine Learning in Embedded System, Hardware Acceleration, and Robotics</p>
+<p>I am currently a Senior Computer Engineering Student at Cal Poly SLO. I am interested in Machine Learning in Embedded Systems, Hardware Acceleration, and Robotics.</p>
 </div>
 <div class="card" style="justify-self:end">
-<img class="avatar" src="https://picsum.photos/400?grayscale" alt="Headshot placeholder" />
+<img class="avatar" src="headshot.JPG" alt="Headshot of Tyler Hamilton" />
+</div>
+</section>
+
+
+<section id="about" class="section">
+<h2>About</h2>
+<div class="card">
+<p>I'm a Senior Computer Engineering student at California Polytechnic State University, San Luis Obispo, with a passion for bridging the gap between software and hardware. My interests lie in machine learning applications for embedded systems, hardware acceleration, and robotics.</p>
+<p>Through my coursework and projects, I've developed expertise in low-level programming, embedded system design, and hardware-software co-design. I'm particularly excited about the intersection of AI and embedded systems, exploring how we can bring intelligent capabilities to resource-constrained devices.</p>
 </div>
 </section>
 
@@ -37,16 +46,16 @@
 <h2>Projects</h2>
 <div class="grid cols-3">
 <article class="card project">
-<h3>Project One</h3>
-<p>Short description. <a href="#">Demo</a> · <a href="#">Code</a></p>
+<h3>Image Processing on Raspberry Pi</h3>
+<p>Developed real-time image processing algorithms on Raspberry Pi using OpenCV. Implemented computer vision techniques for edge detection, filtering, and object recognition with optimized performance for embedded systems.</p>
 </article>
 <article class="card project">
-<h3>Project Two</h3>
-<p>What problem it solves. <a href="#">Demo</a> · <a href="#">Code</a></p>
+<h3>Sudoku Game on STM32</h3>
+<p>Built an interactive Sudoku game running on STM32 microcontroller with custom display drivers. Implemented game logic, user input handling, and real-time puzzle solving algorithms optimized for embedded constraints.</p>
 </article>
 <article class="card project">
-<h3>Project Three</h3>
-<p>Tech stack. <a href="#">Demo</a> · <a href="#">Code</a></p>
+<h3>5-Stage Pipeline in Vivado</h3>
+<p>Designed and implemented a 5-stage RISC-V pipeline processor using SystemVerilog in Vivado. Included hazard detection, forwarding units, and branch prediction to achieve efficient instruction execution.</p>
 </article>
 </div>
 </section>
@@ -70,22 +79,32 @@
 </div>
 </section>
 
-<section id="about" class="section">
-<h2>About</h2>
+<section id="resume" class="section">
+<h2>Resume</h2>
 <div class="card">
-<p>Write a short bio about your education or experience. This could include your academic background, work experience, or what drives you in your field.</p>
-<p>You can expand this section with more details about your journey, achievements, or what you're passionate about in your professional life.</p>
+<p style="margin-bottom: 16px;">📄 <a href="resume.pdf" target="_blank" rel="noopener">Download PDF</a></p>
+<iframe src="resume.pdf" type="application/pdf" style="width: 100%; height: 800px; border: 1px solid var(--border); border-radius: 8px;" title="Resume PDF"></iframe>
 </div>
 </section>
 
 <section id="contact" class="section">
 <h2>Contact</h2>
 <div class="card">
-<p>✉️ <a href="mailto:you@example.com">you@example.com</a></p>
-<p>💼 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></p>
-<p>🐙 <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></p>
+<p>✉️ <a href="mailto:tylerfphamilton@gmail.com">tylerfphamilton@gmail.com</a></p>
+      <p>💼 <a href="https://linkedin.com/in/tyler-fp-hamilton" target="_blank" rel="noopener">LinkedIn</a></p>
+<p>🐙 <a href="https://github.com/tylerfphamilton" target="_blank" rel="noopener">GitHub</a></p>
 </div>
 </section>
 </main>
+<script>
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    document.title = 'Please come back! 🥺';
+  } else {
+    document.title = originalTitle;
+  }
+});
+</script>
 </body>
 </html>
