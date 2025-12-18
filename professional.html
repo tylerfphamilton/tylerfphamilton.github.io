@@ -1,11 +1,18 @@
 <!-- professional.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name – Professional</title>
+<meta name="description" content="Professional portfolio of Your Name." />
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
 <div class="container">
 <nav>
-<div class="brand">Your Name</div>
+<div class="brand">Tyler Hamilton</div>
 <div class="links">
 <a href="index.html" class="chip">Home</a>
 <a href="professional.html" class="chip">Professional</a>
@@ -17,8 +24,8 @@
 <main class="container">
 <section class="hero">
 <div>
-<h1>Hi, I'm <span style="white-space:nowrap">Your Name</span> 👋</h1>
-<p>Short tagline about what you do—e.g., “I build fast, accessible web apps and play with embedded systems.”</p>
+<h1>Hi, I'm <span style="white-space:nowrap">Tyler Hamilton</span> 👋</h1>
+<p>I am currently a Senior Computer Engineering Student at Cal Poly SLO. I am intested in Machine Learning in Embedded System, Hardware Acceleration, and Robotics</p>
 </div>
 <div class="card" style="justify-self:end">
 <img class="avatar" src="https://picsum.photos/400?grayscale" alt="Headshot placeholder" />
@@ -45,15 +52,39 @@
 </section>
 
 
-<section id="about" class="section">
-<h2>About</h2>
-<p>Write a short bio about your education or experience.</p>
+<section id="skills" class="section">
+<h2>Skills</h2>
+<div class="grid cols-3">
+<div class="card">
+<h3>Programming Languages</h3>
+<p>Python, C++, C, RISC-V Assembly, SystemVerilog, MATLAB, React, Node.js, HTML/CSS</p>
+</div>
+<div class="card">
+<h3>Embedded and Hardware</h3>
+<p>STM32, ESP32, UART, I²C, SPI, GPIO, ADC, DAC, PWM</p>
+</div>
+<div class="card">
+<h3>Tools and Platforms</h3>
+<p>Unix (Vim), Linux (Ubuntu), LTspice, GNU Radio, MQTT, OpenCV</p>
+</div>
+</div>
 </section>
 
+<section id="about" class="section">
+<h2>About</h2>
+<div class="card">
+<p>Write a short bio about your education or experience. This could include your academic background, work experience, or what drives you in your field.</p>
+<p>You can expand this section with more details about your journey, achievements, or what you're passionate about in your professional life.</p>
+</div>
+</section>
 
 <section id="contact" class="section">
 <h2>Contact</h2>
+<div class="card">
 <p>✉️ <a href="mailto:you@example.com">you@example.com</a></p>
+<p>💼 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></p>
+<p>🐙 <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a></p>
+</div>
 </section>
 </main>
 </body>
