@@ -395,4 +395,12 @@
       justify-content: flex-start;
     }
   }
+
+  .friends-img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+  }
+
   
