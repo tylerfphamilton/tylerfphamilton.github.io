@@ -318,6 +318,52 @@
     border-radius: 18px;
     box-shadow: var(--shadow-soft);
   }
+
+  /* ============================================
+   HORIZONTAL PROJECT SCROLLER
+   ============================================ */
+.project-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .project-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .project-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+  
+  .project-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .project-card {
+    flex: 0 0 280px; /* width of each card */
+    scroll-snap-align: start;
+  
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-soft);
+  
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
   
   /* ============================================
      RESPONSIVE
