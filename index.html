@@ -2,6 +2,63 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tyler Hamilton – Home</title>
+  <meta name="description" content="Personal website of Tyler Hamilton - Computer Engineering Student at Cal Poly SLO." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">Tyler Hamilton</div>
+      <div class="links">
+        <a href="professional.html" class="chip">Professional</a>
+        <a href="personal.html" class="chip">Personal</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Welcome 👋</h1>
+    <p class="intro">
+      Thanks for visiting my website! This is where I share a bit about who I am, both professionally and personally.
+      Use the sections below to explore my work, interests, and projects.
+    </p>
+
+    <div class="home-links">
+      <a href="professional.html" class="card card-link">
+        <h3>Professional</h3>
+        <p>Explore my engineering projects, coursework, and experience.</p>
+      </a>
+
+      <a href="personal.html" class="card card-link">
+        <h3>Personal</h3>
+        <p>Get to know my hobbies, interests, and personal side.</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<script>
+  const originalTitle = document.title;
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      document.title = 'Please come back! 🥺';
+    } else {
+      document.title = originalTitle;
+    }
+  });
+</script>
+</body>
+</html>
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tyler Hamilton – Home</title>
@@ -36,10 +93,10 @@ p { color: var(--muted); max-width: 700px; margin: 12px auto 24px; }
 </div>
 </nav>
 </div>
-</header>
+</header> -->
 
 
-<main>
+<!-- <main>
 <h1>Welcome 👋</h1>
 <p>This is my personal website. Use the tabs above to view my <strong>Professional/School</strong> portfolio or my <strong>Personal</strong> page.</p>
 <div style="margin-top: 48px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
@@ -62,6 +119,37 @@ document.addEventListener('visibilitychange', function() {
     document.title = originalTitle;
   }
 });
-</script>
+</script> -->
+<!-- <main>
+    <h1>Welcome 👋</h1>
+    <p>
+      Thanks for visiting my website! This is where I share a bit about who I am—both professionally and personally.
+      Use the sections below to explore my work, interests, and projects.
+    </p>
+  
+    <div style="margin-top: 48px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+      <a href="professional.html" class="card" style="max-width: 300px; text-align: left; display: block;">
+        <h3 style="margin-top: 0;">Professional</h3>
+        <p style="margin-bottom: 0;">Explore my engineering projects, coursework, and experience.</p>
+      </a>
+  
+      <a href="personal.html" class="card" style="max-width: 300px; text-align: left; display: block;">
+        <h3 style="margin-top: 0;">Personal</h3>
+        <p style="margin-bottom: 0;">Get to know my hobbies, interests, and personal side.</p>
+      </a>
+    </div>
+  </main>
+  
+  <script>
+    const originalTitle = document.title;
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        document.title = 'Please come back! 🥺';
+      } else {
+        document.title = originalTitle;
+      }
+    });
+  </script>
+  
 </body>
-</html>
+</html> -->
