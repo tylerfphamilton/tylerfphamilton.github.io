@@ -114,6 +114,52 @@
       </p>
     </article>
 
+    <article class="project-card">
+      <h3>Multiplayer Tic-Tac-Toe Client/Server (TCP Sockets + Custom Protocol)</h3>
+      <p>
+        Implemented a complete multiplayer tic-tac-toe system in C using TCP sockets, a custom
+        length-prefixed PDU protocol (13 packet types), and <code>poll()</code>-based I/O multiplexing.
+        Built both <code>ttt-server</code> and <code>ttt-client</code> to be strictly compatible with a
+        reference implementation, requiring exact packet formats, network byte order correctness, and
+        robust connection management.
+      </p>
+      <div class="actions">
+        <a class="chip" href="https://github.com/tylerfphamilton/Computer-Networks-CPE-464-/tree/main/ProgrammingAssignmentTwo/CPE-464-Program-2" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>Packet Trace Sniffer (pcap) — Ethernet/ARP/IP/ICMP/TCP/UDP</h3>
+      <p>
+        Built a C (C99/POSIX) packet trace analyzer that reads offline <code>.pcap</code> files using the
+        <code>libpcap</code> API and prints Wireshark-style header fields to STDOUT. Implemented modular
+        parsers for Ethernet, ARP (request/reply), IPv4, ICMP (echo request/reply), TCP, and UDP, with
+        correct endianness handling via <code>ntohs()/ntohl()</code>.
+      </p>
+      <div class="actions">
+        <a class="chip" href="https://github.com/tylerfphamilton/Computer-Networks-CPE-464-/tree/main/CPE-464-Programming-Assignment-One-Trace-" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>DTMF Signal Analyzer & Decoder</h3>
+      <p>
+        Designed and implemented a digital signal processing pipeline to analyze and decode
+        DTMF (touch-tone) audio signals. The system processes WAV audio, isolates row and column
+        frequencies using filter banks, extracts signal envelopes, and detects keypad symbols
+        while minimizing inter-symbol interference (ISI).
+      </p>
+      <div class="actions">
+        <a class="chip" href="https://github.com/tylerfphamilton/Signal-Analyzer---Signals-Final-Project" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </article>
+
   </div>
 </section>
 
