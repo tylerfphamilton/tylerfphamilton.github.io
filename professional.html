@@ -26,7 +26,7 @@
 <div>
 <h1>Hi, I'm <span style="white-space:nowrap">Tyler Hamilton</span> 👋</h1>
 <p>
-  I am a fourth-year Computer Engineering student at Cal Poly SLO with interests in embedded systems, machine learning for embedded systems, hardware acceleration, and robotics. I am currently applying to graduate programs with the goal of pursuing a master’s or Ph.D.
+  I am a fourth-year Computer Engineering student at Cal Poly SLO with interests in embedded systems, machine learning for embedded systems, hardware acceleration, and robotics. In the Fall, I will be heading to UCLA, where I will be pursuing a Master's in Electrical and Computer Engineering. 
 </p>
 </div>
 <div class="card" style="justify-self:end">
@@ -39,42 +39,68 @@
 <h2>About</h2>
 <div class="card">
 <p>I'm a fourth-year Computer Engineering student at California Polytechnic State University, San Luis Obispo, with a passion for bridging the gap between software and hardware. My interests lie in embedded systems, hardware acceleration, and robotics.</p>
-<p>Through my coursework and projects, I've developed expertise in low-level programming, embedded system design, and hardware-software co-design. I'm particularly excited about the intersection of AI and embedded systems, exploring how we can bring intelligent capabilities to resource-constrained devices.</p>
+<p>Through my coursework and projects, I've developed expertise in low-level programming, embedded system design, and hardware-software co-design. I'm particularly excited about the intersection of Machine Learning and embedded systems, exploring how we can bring intelligent capabilities to resource-constrained devices.</p>
 </div>
 </section>
 
+<!-- Robotics Projects First -->
 <section id="projects" class="section">
-<h2>In Progress Projects</h2>
-<div class="project-scroll">
-<article class="project-card">
-<h3>HAILO Accelerator + Raspberry Pi 5 Face Recognition</h3>
-<p>
-    I am developing a real-time face recognition pipeline using a Raspberry Pi 5 and a HAILO AI accelerator.
-    This project focuses on deploying efficient deep-learning inference on edge hardware, optimizing model
-    performance, and building a reliable system capable of recognizing individuals in real-world conditions.
-</p>
-</article>
-<article class="project-card">
-<h3>SLAM Autonomous Robot — Sensor Encoders & Drivers</h3>
-<p>
-    For my senior project, I am writing low-level C/C++ firmware for an autonomous SLAM robot. I am responsible
-    for implementing encoder drivers that accurately measure wheel rotation and distance traveled, running under
-    FreeRTOS on an ESP32. The system publishes sensor data over serial to support real-time localization and mapping.
-</p>
-</article>  
-<article class="project-card">
-  <h3>Personalized Fitness App For Endurance Athletes</h3>
-  <p>
-    I am designing a fitness platform that helps endurance athletes understand their training data, biomarkers,
-    and performance trends. The app uses machine learning and a personalized AI assistant to analyze workouts,
-    surface actionable insights, and make complex information more digestible and user-friendly.
-  </p>
-</article>  
-</div>
+  <h2>Robotics Projects</h2>
+  <div class="project-scroll">
+
+    <article class="project-card">
+      <h3>Multi-Core Motor Encoder Driver — Autonomous Robotics</h3>
+      <p>
+        Developed an ESP32-based motor encoder driver using FreeRTOS, configuring PCNT hardware for quadrature encoding
+        and transmitting timestamped data over UART to a Jetson processor. Architected a dual-core pipeline with pinned
+        tasks for 50 Hz encoder sampling, using inter-task queues to isolate time-critical motor feedback from
+        communication overhead.
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Kalman Filter IMU Integration — Mars Rover</h3>
+      <p>
+        Cal Poly's Mars Rover relies solely on wheel encoders for motion detection — a problem when caught in a sandtrap,
+        where encoders report movement even when the rover is stuck. I implemented an Error-State Kalman Filter (ESKF)
+        fusing accelerometer and gyroscope data for real-time attitude estimation, and am developing wheel-slip fault
+        detection by comparing IMU motion estimates against encoder feedback to identify sand entrapment.
+      </p>
+    </article>
+
+  </div>
 </section>
 
-<section id="completed-projects" class="section">
-  <h2>Completed Projects</h2>
+<!-- Machine Learning Projects -->
+<section id="projects" class="section">
+  <h2>Machine Learning in Embedded Systems Projects</h2>
+  <div class="project-scroll">
+
+    <article class="project-card">
+      <h3>Dance DJ Deck — Gesture-Controlled Audio Engine</h3>
+      <p>
+        Built a real-time gesture-controlled DJ system on a Raspberry Pi 5 with a Hailo-8 AI accelerator.
+        Runs YOLOv8 pose estimation at 30fps to track arm keypoints and map body gestures — T-pose, raised
+        arms, 90° bends — to live audio effects including volume, reverb, and high/low-pass filters. Integrated
+        open-source DSP filters into a C++ audio engine using PortAudio, with std::atomic parameters shared
+        between the gesture and audio threads for lock-free, glitch-free real-time processing.
+      </p>
+      <div class="actions">
+        <a class="chip" href="https://github.com/tylerfphamilton/Hand-Gesture-Control-CPE-542" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </article>
+
+<!-- Will add more later (after Spring Quater) -->
+
+  </div>
+</section>
+
+<!-- Other Embedded / Computer Architecture Projects -->
+
+ <section id="completed-projects" class="section">
+  <h2>Embedded Systems / Computer Architecture Projects</h2>
   <div class="project-scroll">
 
     <article class="project-card">
@@ -118,6 +144,66 @@
         </a>
       </div>
     </article>
+
+  </div>
+</section>
+
+
+<!-- Operating Systems Projects -->
+
+<section id="completed-projects" class="section">
+  <h2>Operating Systems Projects</h2>
+  <div class="project-scroll">
+
+    <article class="project-card">
+      <h3>bfind — Breadth-First Filesystem Search (C)</h3>
+      <p>
+        Implemented a BFS-order alternative to Unix find using POSIX opendir/readdir/closedir
+        and a queue. Supports -name, -type, -mtime, -size, and -perm filters, filesystem boundary
+        detection via st_dev (-xdev), and symlink following with cycle detection using
+        (st_dev, st_ino) pairs (-L).
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Virtual Memory Simulator (C)</h3>
+      <p>
+        Simulated virtual-to-physical address translation with a 16-entry TLB and 256-entry page
+        table backed by a binary backing store. Implemented FIFO, LRU, and OPT page replacement
+        algorithms with a variable physical frame count, reporting page fault rates and TLB hit
+        rates across a sequence of logical memory accesses.
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Process Scheduler Simulator (C)</h3>
+      <p>
+        Built a CPU scheduler simulator supporting FCFS, SJF, preemptive SRTF, and Round Robin
+        across multiple simulated CPUs. Tracks and computes per-job turnaround, response, and
+        wait times for each algorithm, with configurable time quantum for RR and deterministic
+        tie-breaking by priority and process ID.
+      </p>
+    </article>
+    
+    <article class="project-card">
+      <h3>SLOsh — Unix Shell (C)</h3>
+      <p>
+        Implemented a Unix-like shell supporting external command execution, cd/exit built-ins,
+        I/O redirection (> and >>), and multi-stage pipes. Managed process lifecycle with fork(),
+        exec(), and waitpid(), and used sigaction() to handle SIGINT so Ctrl-C kills child
+        processes without terminating the shell.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- Computer Networks Projects -->
+
+<section id="completed-projects" class="section">
+  <h2>Computer Networks Projects</h2>
+  <div class="project-scroll">
 
     <article class="project-card">
       <h3>P2P File Sharing with Reliable UDP</h3>
@@ -165,6 +251,16 @@
       </div>
     </article>
 
+  </div>
+</section>
+
+
+<!-- Other Projects -->
+ 
+<section id="completed-projects" class="section">
+  <h2>DSP Projects</h2>
+  <div class="project-scroll">
+    
     <article class="project-card">
       <h3>DTMF Signal Analyzer & Decoder</h3>
       <p>
